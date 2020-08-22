@@ -1,0 +1,30 @@
+Credit Cards 
+***************
+
+reading of clean data using pandas library and user personal information which are 
+not important to data analysis are dropped. e.g. name, address, gender etc.
+
+Approval rate and Booking rate are calculted.
+
+Filter out those applicants whose application were declined as they are non-potential customer.
+P.S. Do not delete these applicants data as they may be useful for future reference by the bank.)
+
+Similarly filter out the pending applicants as they have the potential to be a customer in near future.
+
+We have to analyze the approved applications to predict the Booking amount for the pending applications.
+i) For approved applications columns like 'Booking' and 'tdecision' are irrelevant, so drop them.
+ii) Label Encode all the categorical data in the approved applications.
+iii) Apply feature scaling to continuos data in the approved applications.
+
+Apply ML algorithms on approved applications data with 'Booking_Amt' as target column.
+Since the raw data is clean so we may get very high accuracy on the ML model. (overfitting)
+
+As we are going to predict 'Booking_Amt' for pending applications, 
+the predicted result will give a rough estimation on 'Booking_Amt'.
+
+Inorder to predict 'Booking_Amt' for pending applications, the pending applications will also require
+the same preprocessing as approved applications (as mentioned in (i), (ii),(iii)).
+
+
+Similarly, we can predict the 'Booking_Amt' for any new customer after approval of their applications.
+As there were no new customer for whom we need to predict the 'Booking_Amt', so that part is not done.
